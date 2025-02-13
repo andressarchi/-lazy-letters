@@ -20,7 +20,6 @@ plabras en el menor tiempo posible, estos tendra que hacerlo  con una letra alat
 4. Tester : Andres Felipe Sarchi
 
 ## Entregables 
-- Requisitos :
 
 - cronograma : Link => https://frequent-currency-6ba.notion.site/Cronograma-19946ed16932805aa852f599e8c46b86?pvs=4
 
