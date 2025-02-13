@@ -20,6 +20,6 @@ plabras en el menor tiempo posible, estos tendra que hacerlo  con una letra alat
 4. Tester : Andres Felipe Sarchi
 
 ## Entregables 
-- Requisitos
-- cronograma
-- Tablero Kanban
+- Requisitos :
+- cronograma : 
+- Tablero Kanban : Link Trello => https://trello.com/b/gAcZK7cV/lazy-letters
