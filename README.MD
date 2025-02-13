@@ -12,7 +12,7 @@ plabras en el menor tiempo posible, estos tendra que hacerlo  con una letra alat
 - Juanes 
 
 
-## Roles  y quines los cumples 
+## Roles  y quienes los cumplen 
 
 1. Lider del equipo : Andres Felipe Sarchi 
 2. Frontends : Julian cortez, Juanes 
