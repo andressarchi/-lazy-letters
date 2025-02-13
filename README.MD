@@ -21,5 +21,7 @@ plabras en el menor tiempo posible, estos tendra que hacerlo  con una letra alat
 
 ## Entregables 
 - Requisitos :
-- cronograma : 
+
+- cronograma : Link => https://frequent-currency-6ba.notion.site/Cronograma-19946ed16932805aa852f599e8c46b86?pvs=4
+
 - Tablero Kanban : Link Trello => https://trello.com/b/gAcZK7cV/lazy-letters
