@@ -1,11 +1,13 @@
 body {
-    background-color: #28DAD4;
+    background-color: #17153B;
     margin: 0;
     padding: 0;
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
 }
 
+
+/*Diseño de la maquetacion del fondo*/
 
 .container {
     position: fixed;
@@ -75,24 +77,16 @@ body {
     bottom: 290px;
     z-index: 10;
 }
-.noise {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 1010;
-    background: url(https://greghub.github.io/coloron/public/svg/noise.png);
-}
+
 .glow {
     position: absolute;
     left: -350px;
     top: -350px;
     width: 800px;
     height: 800px;
-    background-color: rgba(81, 237, 200, 0.34);
+    background-color: rgba(197, 189, 189, 0.253);
     border-radius: 50%;
-    box-shadow: 0 0 100px 100px rgba(81, 237, 200, 0.34);
+    box-shadow: 0 0 100px 100px rgba(197, 189, 189, 0.253);
     z-index: 1010;
 }
 .sun {
@@ -101,8 +95,10 @@ body {
     top: 50%;
     width: 1px;
     height: 1px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(139, 138, 138);
     border-radius: 50%;
-    box-shadow: 0 0 32px 32px rgba(255, 227, 69, 1), 
-                0 0 150px 150px rgba(103, 244, 210, 0.4);
+    box-shadow: 0 0 32px 32px rgb(255, 255, 255), 
+                0 0 150px 150px rgba(197, 189, 189, 0.74);
 }
+
+/*Diseño M*/
