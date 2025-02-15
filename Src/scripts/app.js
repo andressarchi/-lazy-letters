@@ -11,14 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let timerInterval;
     let seconds = 60; // Inicializamos con 60 segundos
 
-    playerButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            playerButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            selectedPlayers = parseInt(button.dataset.players);
-        });
-    });
 
+    //Funcion del boton play
     playButton.addEventListener('click', () => {
         console.log(`Iniciando juego con ${selectedPlayers} jugadores`);
         gameInterface.classList.add('slide-left');
