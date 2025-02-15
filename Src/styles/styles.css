@@ -259,6 +259,10 @@ h1{
 
 /* Media queries for larger screens */
 @media screen and (min-width: 300px) {
+    .container-title2ñ{
+        width: 100%;
+    }
+    
     .title-Container {
       width: 60%;
       max-width: 300px;
