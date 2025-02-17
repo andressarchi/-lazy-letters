@@ -129,6 +129,7 @@ header{
     margin-top: 11rem;
     border: 2px solid white;
     border-radius: 30px;
+    position: relative;
     z-index: 10002;
 }
 
