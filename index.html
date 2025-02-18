@@ -25,10 +25,10 @@
 
         <!--Maquetacion game/interface-->
         <div class="game-interface">
-            <div class="player-buttons">
-                <button class="player-btn" data-players="2">2 Jugadores</button>
-                <button class="player-btn" data-players="3">3 Jugadores</button>
-                <button class="player-btn" data-players="4">4 Jugadores</button>
+            <div class="player-buttons" id="start-container">
+                <button class="player-btn" onclick="startGame(2)">2 Jugadores</button>
+                <button class="player-btn" onclick="startGame(3)">3 Jugadores</button>
+                <button class="player-btn" onclick="startGame(4)">4 Jugadores</button>
             </div>
             <button id="play-btn">Play</button>
         </div>

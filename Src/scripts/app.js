@@ -6,9 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const randomWordElement = document.getElementById('random-word');
     const timerElement = document.getElementById('timer');
 
-    let selectedPlayers = 2;
-    let timerInterval;
-    let seconds = 60; // Inicializamos con 60 segundos
 
 
     //Funcion del boton play
