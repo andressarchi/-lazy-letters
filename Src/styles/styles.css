@@ -168,7 +168,7 @@ h1{
     padding: 0.5rem 1rem;
     font-size: 1rem;
     cursor: pointer;
-    background-color: #3E3B66;
+    background-color: #3e3b66a4;
     color: white;
     border: none;
     border-radius: 5px;
@@ -179,9 +179,9 @@ h1{
 }
 
 .player-btn:hover{
-    box-shadow: 0 0 10px #17153B;
+    box-shadow: 0 0 20px white;
     font-weight: bold;
-    opacity: 0.9;
+    opacity: 1;
 }
 
 #play-btn{
