@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const randomWordElement = document.getElementById('random-word');
     const timerElement = document.getElementById('timer');
 
+    let selectedPlayers = 4;
+    let timerInterval;
+   
+
 
 
     //Funcion del boton play
