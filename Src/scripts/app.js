@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const playerButtons = document.querySelectorAll('.player-btn');
     const playButton = document.getElementById('play-btn');
     const gameInterface = document.querySelector('.game-interface');
     const titleContainer = document.querySelector('.container-title2');
