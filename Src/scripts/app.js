@@ -8,3 +8,49 @@ let timeUpModal = document.getElementById('timeUpModal'); // Modal
 let timeUpMessage = document.getElementById('timeUpMessage'); // Mensaje del modal
 let nextTurnBtn = document.getElementById('nextTurnBtn'); // Botón de siguiente turno
 
+document.addEventListener('DOMContentLoaded', () => {
+    const playerButtons = document.querySelectorAll('.player-btn');
+    const playButton = document.getElementById('play-btn');
+    const gameInterface = document.querySelector('.game-interface');
+    const titleContainer = document.querySelector('.container-title2');
+    const gameArea = document.querySelector('.game-area');
+    const randomWordElement = document.getElementById('random-word');
+    const timerElement = document.getElementById('timer');
+    const wordInput = document.getElementById('word-input');
+    const messageElement = document.getElementById('message');
+    const winnerElement = document.getElementById('winner');
+    let selectedPlayers = 2;
+
+    playerButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            playerButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            selectedPlayers = parseInt(button.dataset.players);
+        });
+    });
+
+    playButton.addEventListener('click', () => {
+        console.log(`Iniciando juego con ${selectedPlayers} jugadores`);
+        gameInterface.style.display = 'none';
+        gameArea.style.display = 'block';
+        titleContainer.classList.add('fade-out');
+        startGame(selectedPlayers);
+    });
+
+    wordInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' && !isTimeUp) {
+            submitWord(e);  // Pasar el evento al submitWord solo si el tiempo no ha terminado
+        }
+    });
+
+    // Cerrar el modal cuando el usuario haga clic en la "X" o en el fondo
+    document.querySelector('.close-btn').addEventListener('click', () => {
+        timeUpModal.style.display = 'none';
+    });
+
+    // Pasar al siguiente turno al hacer clic en el botón del modal
+    nextTurnBtn.addEventListener('click', () => {
+        timeUpModal.style.display = 'none'; // Cerrar el modal
+        nextTurn(); // Pasar al siguiente turno
+    });
+});
