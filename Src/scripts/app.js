@@ -142,3 +142,43 @@ function determineWinner() {
         document.getElementById("winner").innerText = `Juego terminado! Ganador: ${winner.name} con ${winner.wordCount} palabras. Las palabras son: ${winner.words.join(", ")}`;
     }
 }
+
+function submitWord(e) {
+    if (e.key === 'Enter' && !isTimeUp) { // Verificar si el tiempo aún no ha terminado
+        const wordInput = document.getElementById("word-input");
+        const word = wordInput.value.trim().toUpperCase(); // Convertir la palabra a mayúsculas
+
+        if (!word) {
+            document.getElementById("message").innerText = "Debe ingresar una palabra antes de enviar.";
+            return;
+        }
+        if (!word.startsWith(currentPlayer.letter)) {
+            document.getElementById("message").innerText = "La palabra no empieza con la letra asignada.";
+            return;
+        }
+        if (usedWords.has(word)) {
+            document.getElementById("message").innerText = "Esta palabra ya ha sido usada.";
+            return;
+        }
+
+        // Guardar la palabra en el array del jugador
+        currentPlayer.words.push(word);
+        usedWords.add(word);
+        currentPlayer.wordCount++;
+
+        let listIndex = document.getElementById("word-list");
+
+        // Limpiar el campo de texto
+        wordInput.value = "";
+
+        // Mostrar las palabras que el jugador ha ingresado
+        listIndex.innerHTML = `${currentPlayer.name} ha ingresado las siguientes palabras: ${currentPlayer.words.join(", ")}`;
+
+        // Mostrar el contenedor solo si hay palabras
+        if (currentPlayer.words.length > 0) {
+            listIndex.style.display = "block"; // Mostrar el recuadro de las palabras
+        } else {
+            listIndex.style.display = "none"; // Ocultar el recuadro si no hay palabras
+        }
+    }
+}
