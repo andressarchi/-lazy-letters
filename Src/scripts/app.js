@@ -54,3 +54,15 @@ document.addEventListener('DOMContentLoaded', () => {
         nextTurn(); // Pasar al siguiente turno
     });
 });
+
+function startGame(numPlayers) {
+    players = Array.from({ length: numPlayers }, (_, i) => ({
+        name: `Jugador ${i + 1}`,
+        letter: getRandomLetter(), // Letra aleatoria
+        wordCount: 0, // Contador de palabras
+        words: [] // Aquí se almacenarán las palabras de cada jugador
+    }));
+
+    currentPlayerIndex = 0; // Turno del primer jugador
+    updateTurn(); // Iniciar el primer turno
+}
