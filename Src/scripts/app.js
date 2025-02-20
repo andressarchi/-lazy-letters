@@ -72,3 +72,24 @@ function getRandomLetter() {
     document.getElementById('random-word').textContent = wordSTR; // Muestra la letra aleatoria en la interfaz
     return wordSTR;
 }
+
+function startTimer() {
+    let timeLeft = 60; // Tiempo inicial
+    document.getElementById('timer').innerText = timeLeft; // Contador del tiempo
+    clearInterval(timer); // Limpiar cualquier temporizador anterior
+
+    // Iniciar el temporizador
+    isTimeUp = false; // Reiniciar el estado de "tiempo agotado"
+    timer = setInterval(() => {
+        timeLeft--;
+        document.getElementById('timer').innerText = timeLeft;
+
+        // Detener el temporizador cuando llegue a cero
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            timeUpMessage.innerText = `¡Tiempo agotado para ${currentPlayer.name}!`; // Mensaje del modal
+            timeUpModal.style.display = 'block'; // Mostrar el modal
+            isTimeUp = true; // Marcar que el tiempo ha terminado
+        }
+    }, 1000); // Se actualiza cada segundo
+}
