@@ -66,3 +66,9 @@ function startGame(numPlayers) {
     currentPlayerIndex = 0; // Turno del primer jugador
     updateTurn(); // Iniciar el primer turno
 }
+
+function getRandomLetter() {
+    let wordSTR = String.fromCharCode(65 + Math.floor(Math.random() * 26)); // Genera una letra aleatoria
+    document.getElementById('random-word').textContent = wordSTR; // Muestra la letra aleatoria en la interfaz
+    return wordSTR;
+}
