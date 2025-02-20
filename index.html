@@ -9,21 +9,19 @@
 </head>
 <body>
 
-      <!--Maquetacion del Header-->
-
+    <!-- Maquetacion del Header -->
     <header>
         <div class="container-title2">
             <div class="title-Container">
-                <h1 class="title">LAZZY LETTERS </h1>
+                <h1 class="title">LAZZY LETTERS</h1>
             </div>
         </div>
     </header>
 
-      <!--Maquetacion Main-->
-
+    <!-- Maquetacion Main -->
     <main>
 
-        <!--Maquetacion game/interface-->
+        <!-- Maquetacion game/interface -->
         <div class="game-interface">
             <div class="player-buttons" id="start-container">
                 <button class="player-btn" data-players="2" onclick="startGame(2)">2 Jugadores</button>
@@ -33,9 +31,9 @@
             <button id="play-btn">Play</button>
         </div>
 
-        <!--Maquetacion game-area-->
+        <!-- Maquetacion game-area -->
         <div class="game-area" style="display: none;">
-            <div id="current-player" </div>
+            <div id="current-player"></div>
             <div id="message"></div>
             <div id="winner"></div>
             <div id="timer">00:00</div>
@@ -43,7 +41,6 @@
             <input type="text" id="word-input" placeholder="Escribe aquí..." onkeypress="submitWord(event)">
             <div id="word-list"></div>
         </div>
-
 
         <!-- Modal para mostrar cuando se acaba el tiempo -->
         <div id="timeUpModal" class="modal">
@@ -54,11 +51,7 @@
             </div>
         </div>
 
-
-
-
-        <!--Maquetacion del fondo-->
-
+        <!-- Maquetacion del fondo -->
         <div class="container">
             <div class="small-glows"></div>
             <div class="glow"><div class="sun"></div></div>
@@ -73,10 +66,10 @@
                 <div class="mount1"></div>
                 <div class="mount2"></div>
             </div>
-            <div class="clouds"></div>
         </div>
     </main>
 
-    <script src="Src/scripts/app.js"></script>
+    <script src="/Src/scripts/app.js"></script>
 </body>
 </html>
+7
