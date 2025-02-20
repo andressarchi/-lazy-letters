@@ -26,20 +26,36 @@
         <!--Maquetacion game/interface-->
         <div class="game-interface">
             <div class="player-buttons" id="start-container">
-                <button class="player-btn" onclick="startGame(2)">2 Jugadores</button>
-                <button class="player-btn" onclick="startGame(3)">3 Jugadores</button>
-                <button class="player-btn" onclick="startGame(4)">4 Jugadores</button>
+                <button class="player-btn" data-players="2" onclick="startGame(2)">2 Jugadores</button>
+                <button class="player-btn" data-players="3" onclick="startGame(3)">3 Jugadores</button>
+                <button class="player-btn" data-players="4" onclick="startGame(4)">4 Jugadores</button>
             </div>
             <button id="play-btn">Play</button>
         </div>
 
-
         <!--Maquetacion game-area-->
         <div class="game-area" style="display: none;">
+            <div id="current-player" </div>
+            <div id="message"></div>
+            <div id="winner"></div>
             <div id="timer">00:00</div>
             <div id="random-word"></div>
-            <input type="text" id="word-input" placeholder="Escribe aquí...">
+            <input type="text" id="word-input" placeholder="Escribe aquí..." onkeypress="submitWord(event)">
+            <div id="word-list"></div>
         </div>
+
+
+        <!-- Modal para mostrar cuando se acaba el tiempo -->
+        <div id="timeUpModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <p id="timeUpMessage"></p>
+                <button id="nextTurnBtn">Pasar al siguiente turno</button>
+            </div>
+        </div>
+
+
+
 
         <!--Maquetacion del fondo-->
 
