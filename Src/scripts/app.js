@@ -93,3 +93,18 @@ function startTimer() {
         }
     }, 1000); // Se actualiza cada segundo
 }
+
+function updateTurn() {
+    if (currentPlayerIndex >= players.length) {
+        determineWinner(); // Si no hay más jugadores, termina el juego
+        return;
+    }
+
+    currentPlayer = players[currentPlayerIndex]; // Definir el jugador actual
+    document.getElementById("current-player").innerText = currentPlayer.name; // Muestra el nombre del jugador
+    document.getElementById("random-word").innerText = currentPlayer.letter; // Muestra la letra aleatoria del jugador
+    document.getElementById("message").innerText = ""; // Limpia el mensaje
+    document.getElementById("word-input").value = ""; // Limpia el campo de texto
+
+    startTimer(); // Iniciar el temporizador
+}
