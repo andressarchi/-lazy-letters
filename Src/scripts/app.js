@@ -119,3 +119,26 @@ function nextTurn() {
         }
     }
 }
+
+function determineWinner() {
+    clearInterval(timer); // Detener el temporizador
+
+    // Verificar si hay jugadores antes de intentar determinar un ganador
+    if (players.length === 0) {
+        document.getElementById("winner").innerText = "No hay jugadores en el juego.";
+        return;
+    }
+
+    // Obtener al jugador con más palabras
+    const winner = players.reduce((max, player) => (player.wordCount > max.wordCount ? player : max));
+
+    // Filtrar los jugadores empatados
+    const tiedPlayers = players.filter(player => player.wordCount === winner.wordCount);
+
+    if (tiedPlayers.length > 1) {
+        let tiedNames = tiedPlayers.map(player => player.name).join(", ");
+        document.getElementById("winner").innerText = `Juego terminado! Empate entre: ${tiedNames} con ${winner.wordCount} palabras.`;
+    } else {
+        document.getElementById("winner").innerText = `Juego terminado! Ganador: ${winner.name} con ${winner.wordCount} palabras. Las palabras son: ${winner.words.join(", ")}`;
+    }
+}
