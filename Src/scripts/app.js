@@ -108,3 +108,14 @@ function updateTurn() {
 
     startTimer(); // Iniciar el temporizador
 }
+
+function nextTurn() {
+    if (isTimeUp) {
+        currentPlayerIndex++; // Pasa al siguiente jugador
+        if (currentPlayerIndex < players.length) {
+            updateTurn(); // Iniciar el turno del siguiente jugador
+        } else {
+            determineWinner(); // Si se acaban los jugadores, termina el juego
+        }
+    }
+}
