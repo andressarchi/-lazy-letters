@@ -128,16 +128,9 @@ function determineWinner() {
 
     // Verificar si hay jugadores antes de intentar determinar un ganador
     if (players.length === 0) {
+        gameArea.style.display="none"
         document.getElementById("winner").innerText = "No hay jugadores en el juego.";
         return;
-        
-        document.getElementById("winner").innerText = `Juego terminado! Empate entre: ${tiedNames} con ${winner.wordCount} palabras.`;
-        document.getElementById("message").style.display="none"
-        document.getElementById("timer").style.display="none"
-        document.getElementById("random-wprd").style.display="none"
-        document.getElementById("word-input").style.display="none"
-        document.getElementById("word-list").style.display="none"
-        document.getElementById("current-player").style.display="none"
     }
 
     // Obtener al jugador con más palabras
@@ -147,27 +140,17 @@ function determineWinner() {
     const tiedPlayers = players.filter(player => player.wordCount === winner.wordCount);
 
     if (tiedPlayers.length > 1) {
+        gameArea.style.display="none"
         let tiedNames = tiedPlayers.map(player => player.name).join(", ");
-        
+        message.style.display="none"
         document.getElementById("winner").innerText = `Juego terminado! Empate entre: ${tiedNames} con ${winner.wordCount} palabras.`;
-        document.getElementById("message").style.display="none"
-        document.getElementById("timer").style.display="none"
-        document.getElementById("random-wprd").style.display="none"
-        document.getElementById("word-input").style.display="none"
-        document.getElementById("word-list").style.display="none"
-        document.getElementById("current-player").style.display="none"
+       
+        
     } else {
         message.style.display="none"
+        gameArea.style.display="none"
         document.getElementById("winner").innerText = `Juego terminado! Ganador: ${winner.name} con ${winner.wordCount} palabras. Las palabras son: ${winner.words.join(", ")}`;
 
-        
-        document.getElementById("winner").innerText = `Juego terminado! Empate entre: ${tiedNames} con ${winner.wordCount} palabras.`;
-        document.getElementById("message").style.display="none"
-        document.getElementById("timer").style.display="none"
-        document.getElementById("random-wprd").style.display="none"
-        document.getElementById("word-input").style.display="none"
-        document.getElementById("word-list").style.display="none"
-        document.getElementById("current-player").style.display="none"
     }
 }
 
