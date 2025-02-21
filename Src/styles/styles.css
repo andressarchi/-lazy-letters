@@ -262,12 +262,41 @@ h1{
     padding: 0.5rem 1rem;
     border-radius: 5px;
 }
+
+#current-player{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 10vh;
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+    border: 2px solid white;
+    border-radius: 30px;
+    position: relative;
+    right: -2rem;
+    z-index: 10002;
+    color: white;
+}
+
 #word-list{
     font-size: 1.5rem;
     color: white;
     margin-bottom: 1rem;
     margin-top: 2rem;
     background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-family: monospace;
+    width: 18rem;
+    display: none;
+}
+#message{
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    background-color: rgba(255, 0, 0, 0.5);
     padding: 0.5rem 1rem;
     border-radius: 5px;
     font-family: monospace;
