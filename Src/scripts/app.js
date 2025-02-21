@@ -128,7 +128,6 @@ function determineWinner() {
 
     // Verificar si hay jugadores antes de intentar determinar un ganador
     if (players.length === 0) {
-        gameArea.style.display="none"
         document.getElementById("winner").innerText = "No hay jugadores en el juego.";
         return;
     }
@@ -140,17 +139,13 @@ function determineWinner() {
     const tiedPlayers = players.filter(player => player.wordCount === winner.wordCount);
 
     if (tiedPlayers.length > 1) {
-        gameArea.style.display="none"
         let tiedNames = tiedPlayers.map(player => player.name).join(", ");
         message.style.display="none"
         document.getElementById("winner").innerText = `Juego terminado! Empate entre: ${tiedNames} con ${winner.wordCount} palabras.`;
-       
         
     } else {
         message.style.display="none"
-        gameArea.style.display="none"
         document.getElementById("winner").innerText = `Juego terminado! Ganador: ${winner.name} con ${winner.wordCount} palabras. Las palabras son: ${winner.words.join(", ")}`;
-
     }
 }
 
