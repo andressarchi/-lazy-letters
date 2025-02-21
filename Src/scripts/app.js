@@ -130,6 +130,14 @@ function determineWinner() {
     if (players.length === 0) {
         document.getElementById("winner").innerText = "No hay jugadores en el juego.";
         return;
+        
+        document.getElementById("winner").innerText = `Juego terminado! Empate entre: ${tiedNames} con ${winner.wordCount} palabras.`;
+        document.getElementById("message").style.display="none"
+        document.getElementById("timer").style.display="none"
+        document.getElementById("random-wprd").style.display="none"
+        document.getElementById("word-input").style.display="none"
+        document.getElementById("word-list").style.display="none"
+        document.getElementById("current-player").style.display="none"
     }
 
     // Obtener al jugador con más palabras
@@ -140,11 +148,26 @@ function determineWinner() {
 
     if (tiedPlayers.length > 1) {
         let tiedNames = tiedPlayers.map(player => player.name).join(", ");
-        message.style.display="none"
+        
         document.getElementById("winner").innerText = `Juego terminado! Empate entre: ${tiedNames} con ${winner.wordCount} palabras.`;
+        document.getElementById("message").style.display="none"
+        document.getElementById("timer").style.display="none"
+        document.getElementById("random-wprd").style.display="none"
+        document.getElementById("word-input").style.display="none"
+        document.getElementById("word-list").style.display="none"
+        document.getElementById("current-player").style.display="none"
     } else {
         message.style.display="none"
         document.getElementById("winner").innerText = `Juego terminado! Ganador: ${winner.name} con ${winner.wordCount} palabras. Las palabras son: ${winner.words.join(", ")}`;
+
+        
+        document.getElementById("winner").innerText = `Juego terminado! Empate entre: ${tiedNames} con ${winner.wordCount} palabras.`;
+        document.getElementById("message").style.display="none"
+        document.getElementById("timer").style.display="none"
+        document.getElementById("random-wprd").style.display="none"
+        document.getElementById("word-input").style.display="none"
+        document.getElementById("word-list").style.display="none"
+        document.getElementById("current-player").style.display="none"
     }
 }
 
